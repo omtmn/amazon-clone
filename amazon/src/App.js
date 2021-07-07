@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navbar from "./components/Navbar";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
             <h1> Login </h1> 
           </Route>
           <Route exact path="/">
+            <Navbar />
             <h1> Home </h1> 
           </Route>
         </Switch>
