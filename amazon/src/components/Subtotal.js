@@ -5,7 +5,7 @@ import { useStateValue } from '../context/StateProvider';
 import { getCartTotal } from '../context/reducer';
 
 function Subtotal() {
-    const [{ cart }, dispatch] = useStateValue();
+    const [{ cart }] = useStateValue();
     return (
         <div className="subtotal">
         <CurrencyFormat
