@@ -6,7 +6,7 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { useStateValue } from "../context/StateProvider";
 
 function Navbar() {
-    const [{ cart }, dispatch] = useStateValue();
+    const [{ cart }] = useStateValue(); //using that data layer and changing it with dispatch
     return (
         <nav className="navbar">
             <Link to="/">
@@ -35,7 +35,7 @@ function Navbar() {
                 <Link className="links" to="/checkout">
                     <div className="nav_optionCart">
                         <ShoppingBasketIcon/>
-                        <span className="nav_optionLineTwo nav_count">{cart?.length}</span> 
+                        <span className="nav_optionLineTwo nav_count">{cart?.length}</span> {/* length of the cart in outer data layer */}
                     </div>
                 </Link>
             </div>
