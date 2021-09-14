@@ -3,7 +3,8 @@ export const initialState = {
 };
 
 export const getCartTotal = (cart) => 
-cart?.reduce((amount, item) => item.price + amount, 0);
+cart?.reduce((amount, item) => item.price + amount, 0); 
+//takes cart and uses reduce method that takes two params, and then accumulate the price to original amount which starts at 0.
 
 const reducer = (state, action) => { // when i get the state, or that cart. we can manipulate that state by dispatching said actions
     switch(action.type) { //check against a bunch of cases is what switch does 
